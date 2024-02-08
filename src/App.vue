@@ -1,12 +1,21 @@
 <script>
 
+// inseriamo tutte le sezione di IMPORT
+import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
+
+import AppHeader from './components/AppHeader.vue';
+
+
 export default {
   data() {
     return {
-      title: ' iniziamo fooorzaaa',
-      progetto: 'aiuuuutoooo'
+      // title: ' iniziamo fooorzaaa',
+      // progetto: 'aiuuuutoooo'
     };
   },
+
+  components: { AppHeader, AppMain, AppFooter }
 };
 
 
@@ -16,13 +25,12 @@ export default {
 
 
 <template>
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
+  <AppHeader>{{ title }}</AppHeader>
 
-  <section>
-    <h2>{{ progetto }}</h2>
-  </section>
+  <AppMain></AppMain>
+
+
+  <AppFooter></AppFooter>
 </template>
 
 
