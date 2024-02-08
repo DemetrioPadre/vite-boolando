@@ -12,7 +12,7 @@ export default {};
                 </ul>
             </div>
             <div class="header-logo-center">
-                <img class="logo" src="./img/boolean-logo.png" alt="" />
+                <img class="logo" src="../assets/images/img/boolean-logo.png" alt="" />
             </div>
             <div class="header-nav-right">
                 <ul>
@@ -34,11 +34,8 @@ export default {};
 .header {
     width: 100%;
     background-color: #ff6900;
-    min-height: 80px;
-    position: fixed;
+    height: 80px;
     display: flex;
-    justify-content: right;
-    z-index: 2;
     align-items: center;
 
     .container {
@@ -47,12 +44,19 @@ export default {};
         width: 1200px;
         margin-left: 300px;
 
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
         .header-nav-left ul {
 
             list-style-type: none;
             text-align: center;
             margin: 0 10px;
             vertical-align: middle;
+            line-height: 130px;
         }
 
         .header-nav-left li {
@@ -60,18 +64,21 @@ export default {};
             text-align: center;
             vertical-align: middle;
             padding: 20px;
+            color: white;
         }
 
         .logo {
             vertical-align: middle;
             width: 200px;
-            padding: 20px;
+            padding: 70px;
             display: flex;
             justify-content: center;
+
         }
 
         .header-nav-right ul {
             list-style-type: none;
+            line-height: 100px;
         }
 
         .header-nav-right li {
