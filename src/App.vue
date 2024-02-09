@@ -34,6 +34,7 @@ export default {
 
 
 
-<style>
-/* @import url */
+<style lang ="scss">
+@use'./styles/general.scss';
 </style>
+

@@ -5,27 +5,27 @@ export default {
 
             images: [
                 {
-                    image: '',
+                    image: '1.webp',
                     imageHover: '',
                 },
                 {
-                    image: '',
+                    image: '2.webp',
                     imageHover: ''
                 },
                 {
-                    image: '',
+                    image: '3.webp',
                     imageHover: ''
                 },
                 {
-                    image: '',
+                    image: '4.webp',
                     imageHover: ''
                 },
                 {
-                    image: '',
+                    image: '5.webp',
                     imageHover: ''
                 },
                 {
-                    image: '',
+                    image: '6.webp',
                     imageHover: ''
                 },
             ],
@@ -41,8 +41,8 @@ export default {
 };
 </script>
 <template>
-    <div>
-        <img :src="buildImagePath(img)" alt="">
+    <div v-for="image in images">
+        <img :src="buildImagePath(image)" alt="">
     </div>
 </template>
 <style lang="scss"></style>
