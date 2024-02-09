@@ -1,30 +1,52 @@
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            genders: [
+                {
+                    gender: 'Donna',
+                },
+                {
+                    gender: 'Uomo',
+                },
+                {
+                    gender: 'Bambini',
+                }
+
+            ],
+            icons: [
+                {
+                    iconName: 'fa-regular fa-user'
+                },
+                {
+                    iconName: 'fa-regular fa-heart'
+                },
+                {
+                    iconName: 'fa-solid fa-cart-shopping'
+                }
+            ]
+        };
+    }
+};
 </script>
 <template>
     <header class="header">
         <div class="container">
             <div class="header-nav-left">
                 <ul>
-                    <li><a href="#">Donna</a></li>
-                    <li><a href="#">Uomo</a></li>
-                    <li><a href="#">Bambini</a></li>
+                    <li v-for="sex in genders"><a href="#">{{ sex.gender }}</a></li>
+
                 </ul>
             </div>
             <div class="header-logo-center">
-                <img class="logo" src="../assets/images/img/boolean-logo.png" alt="" />
+                <img class="logo" src="../assets/img/boolean-logo.png" alt="" />
             </div>
             <div class="header-nav-right">
                 <ul>
-                    <li>
-                        <a href="#"><i class="fa-regular fa-user"></i></a>
+                    <li v-for="icone in icons">
+                        <a href="#" :class="icone.iconName"></a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
-                    </li>
+
                 </ul>
             </div>
         </div>

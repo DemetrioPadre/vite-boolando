@@ -3,7 +3,6 @@
 // inseriamo tutte le sezione di IMPORT
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
-
 import AppHeader from './components/AppHeader.vue';
 
 
@@ -25,7 +24,7 @@ export default {
 
 
 <template>
-  <AppHeader>{{ title }}</AppHeader>
+  <AppHeader></AppHeader>
 
   <AppMain></AppMain>
 
@@ -35,4 +34,6 @@ export default {
 
 
 
-<style></style>
+<style>
+/* @import url */
+</style>
