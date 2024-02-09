@@ -1,48 +1,126 @@
 <script>
+import AppCard from './AppCard.vue';
 export default {
     data() {
         return {
 
             images: [
                 {
-                    image: '1.webp',
-                    imageHover: '',
+                    id: 1,
+                    frontImage: '1.webp',
+                    backImage: '1b.webp',
+                    brand: "Levi's",
+                    name: 'Relaxed Fit',
+                    price: 29.99,
+                    isInFavorites: true,
+                    badges: [
+                        {
+                            type: 'tag',
+                            value: 'Sostenibilità',
+                        },
+                        {
+                            type: 'discount',
+                            value: '-50%',
+                        },
+                    ],
                 },
                 {
-                    image: '2.webp',
-                    imageHover: ''
+                    id: 2,
+                    frontImage: '2.webp',
+                    backImage: '2b.webp',
+                    brand: 'Guess',
+                    name: 'Roses Tee',
+                    price: 20.99,
+                    isInFavorites: true,
+                    badges: [
+                        {
+                            type: 'discount',
+                            value: '-30%',
+                        },
+                    ],
                 },
                 {
-                    image: '3.webp',
-                    imageHover: ''
+                    id: 3,
+                    frontImage: '3.webp',
+                    backImage: '3b.webp',
+                    brand: 'Come Zucchero Filato',
+                    name: 'Voglia di colori pastello',
+                    price: 129.99,
+                    isInFavorites: false,
+                    badges: [
+                        {
+                            type: 'discount',
+                            value: '-30%',
+                        },
+                    ],
                 },
                 {
-                    image: '4.webp',
-                    imageHover: ''
+                    id: 4,
+                    frontImage: '4.webp',
+                    backImage: '4b.webp',
+                    brand: "Levi's",
+                    name: 'Tee Unisex',
+                    price: 14.99,
+                    isInFavorites: false,
+                    badges: [
+                        {
+                            type: 'tag',
+                            value: 'Sostenibilità',
+                        },
+                        {
+                            type: 'discount',
+                            value: '-50%',
+                        },
+                    ],
                 },
                 {
-                    image: '5.webp',
-                    imageHover: ''
+                    id: 5,
+                    frontImage: '5.webp',
+                    backImage: '5b.webp',
+                    brand: 'Maya Deluxe',
+                    name: 'Stripe Bodice',
+                    price: 99.99,
+                    isInFavorites: true,
+                    badges: [
+                        {
+                            type: 'tag',
+                            value: 'Sostenibilità',
+                        },
+                        {
+                            type: 'discount',
+                            value: '-50%',
+                        },
+                    ],
                 },
                 {
-                    image: '6.webp',
-                    imageHover: ''
+                    id: 6,
+                    frontImage: '6.webp',
+                    backImage: '6b.webp',
+                    brand: 'Esprit',
+                    name: 'Maglione - Black',
+                    price: 29.99,
+                    isInFavorites: true,
+                    badges: [
+                        {
+                            type: 'tag',
+                            value: 'Sostenibilità',
+                        },
+                    ],
                 },
             ],
         };
     },
     methods: {
-        buildImagePath(imageName) {
-            const imageUrl = new URL('../assets/img/' + imageName, import.meta.url).href;
-            return imageUrl.href;
+        generateURL(path) {
+            return new URL(path, import.meta.url).href;
         }
 
-    }
+    },
+    components: { AppCard },
+
 };
 </script>
 <template>
-    <div v-for="image in images">
-        <img :src="buildImagePath(image)" alt="">
-    </div>
+    <AppCard v-for="image in images" :img="generateURL('../assets/img/' + image.frontImage)"></AppCard>
 </template>
 <style lang="scss"></style>
