@@ -111,9 +111,7 @@ export default {
         };
     },
     methods: {
-        generateURL(path) {
-            return new URL(path, import.meta.url).href;
-        }
+
 
     },
     components: { AppCard },
@@ -121,6 +119,12 @@ export default {
 };
 </script>
 <template>
-    <AppCard v-for="image in images" :img="generateURL('../assets/img/' + image.frontImage)"></AppCard>
+    <div class="container">
+
+        <AppCard v-for="image in images" :item="image"></AppCard>
+
+    </div>
 </template>
-<style lang="scss"></style>
+<style lang="scss">
+@use '../styles/partials/mixsins' as *;
+</style>
