@@ -28,6 +28,7 @@ export default {
 .brand {
     font-weight: bolder;
     font-size: 15px;
+    margin-top: 10px;
 }
 
 .model {
