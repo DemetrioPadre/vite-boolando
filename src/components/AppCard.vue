@@ -15,6 +15,7 @@ export default {
 <template>
     <div class="card">
         <img :src="generateURL('../assets/img/' + item.frontImage)" :alt="title">
+        <img class="img-none" :src="generateURL('../assets/img/' + item.backImage)" :alt="title">
         <p class="heart">&hearts;</p>
         <p class="sale">{{ item.badges.value }}</p>
         <p class="sostenibilità">{{ item.badges.value }}</p>

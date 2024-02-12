@@ -18,7 +18,9 @@ export default {
 
   components: { AppHeader, AppMain, AppCard, AppFooter },
   created() {
-    axios.get('http://localhost:3000/products');
+    axios.get(`${store.apiUri}/products`).then((res) => {
+      this.products = res.data;
+    });
   }
 };
 

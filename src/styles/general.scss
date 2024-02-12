@@ -128,6 +128,11 @@
             cursor: pointer;
         }
 
+        //:hover
+
+
+
+
 
 
         .sostenibilità {
@@ -141,6 +146,21 @@
             bottom: 10px;
             cursor: pointer;
         }
+    }
+
+    .card .img-none {
+        display: none;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .card:hover .img-none {
+        display: block;
+    }
+
+    .card:hover img {
+        display: none;
+
     }
 }
 
