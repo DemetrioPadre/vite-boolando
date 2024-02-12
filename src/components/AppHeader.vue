@@ -1,4 +1,6 @@
 <script>
+import { store } from '../store/index';
+
 export default {
     data() {
         return {
@@ -24,7 +26,8 @@ export default {
                 {
                     iconName: 'fa-solid fa-cart-shopping'
                 }
-            ]
+            ],
+            store,
         };
     }
 };
@@ -39,12 +42,14 @@ export default {
                 </ul>
             </div>
             <div class="header-logo-center">
+
                 <img class="logo" src="../assets/img/boolean-logo.png" alt="" />
             </div>
             <div class="header-nav-right">
                 <ul>
                     <li v-for="icone in icons">
                         <a href="#" :class="icone.iconName"></a>
+
                     </li>
 
                 </ul>

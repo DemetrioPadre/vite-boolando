@@ -1,5 +1,6 @@
 <script>
 import AppCard from './AppCard.vue';
+
 export default {
     data() {
         return {
@@ -115,6 +116,9 @@ export default {
 
     },
     components: { AppCard },
+    // created() {
+    //     axios.get();
+    // }. // da mettere in app
 
 };
 </script>
