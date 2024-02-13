@@ -6,17 +6,19 @@ import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppCard from './components/AppCard.vue';
+import AppModal from './components/AppModal.vue';
 
 
 
 export default {
   data() {
     return {
-      products: []
+      products: [],
+      store,
     };
   },
 
-  components: { AppHeader, AppMain, AppCard, AppFooter },
+  components: { AppHeader, AppMain, AppCard, AppFooter, AppModal },
 
 };
 </script>
@@ -26,6 +28,7 @@ export default {
 <template>
   <AppHeader></AppHeader>
   <div v-for="product in products"> {{ product.name }}</div>
+  <AppModal v-if="store.modal.show"></AppModal>
   <AppMain></AppMain>
 
 
