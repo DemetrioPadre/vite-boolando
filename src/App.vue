@@ -12,27 +12,20 @@ import AppCard from './components/AppCard.vue';
 export default {
   data() {
     return {
-
+      products: []
     };
   },
 
   components: { AppHeader, AppMain, AppCard, AppFooter },
-  created() {
-    axios.get(`${store.apiUri}/products`).then((res) => {
-      this.products = res.data;
-    });
-  }
+
 };
-
-
-
 </script>
 
 
 
 <template>
   <AppHeader></AppHeader>
-
+  <div v-for="product in products"> {{ product.name }}</div>
   <AppMain></AppMain>
 
 
